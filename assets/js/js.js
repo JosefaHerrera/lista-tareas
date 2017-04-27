@@ -63,19 +63,15 @@ var tareasJ= [
  var tareasjs = tareasJ.forEach(function(valorActual){
     document.write("<ul> <li> " +valorActual.title+"</li></ul>")});
 
- //ahora debes hacer como se llama una funcion ??? insertarJS(); ??
-function User(userId,id,title,completed){
+ //ahora debes hacer como se llama una funcion ??? ; ??
+/*function User(userId,id,title,completed){
 	this.userId = userId;
 	this.id = id;
 	this.title = title;
 	this.completed = completed;
-};
+};*/
 
-function insertarJS(introtarea){//el parametro de esto es el title, lo que ingresa el usuario, lo demas lo asignas tú dos lineas más abajo
-	var largo = tareasJ.length+1; //sacando la ultima posicion que es donde insertaremos
-	var variable = User("id","User",introtarea,false); //vamos a crear una variable con el constructor user, pasale los parametros
-	tareasJ[largo] = TareaJ.push(variable);
-};
+
 
 
 var arr = [];
