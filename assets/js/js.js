@@ -63,6 +63,19 @@ var tareasJ= [
  var tareasjs = tareasJ.forEach(function(valorActual){
     document.write("<ul> <li> " +valorActual.title+"</li></ul>")});
 
+ //ahora debes hacer como se llama una funcion ??? insertarJS(); ??
+function User(userId,id,title,completed){
+	this.userId = userId;
+	this.id = id;
+	this.title = title;
+	this.completed = completed;
+};
+
+function insertarJS(introtarea){//el parametro de esto es el title, lo que ingresa el usuario, lo demas lo asignas tú dos lineas más abajo
+	var largo = tareasJ.length - 1; //sacando la ultima posicion que es donde insertaremos
+	var variable = User("id","User",introtarea,true); //vamos a crear una variable con el constructor user, pasale los parametros
+	tareasJ[largo] = TareaJ.push(variable)
+};
 
 
 var arr = [];
@@ -75,7 +88,7 @@ function Tareas(tarea) {
   this.tareaID = (arr.length+ 1);
 };
 
-// Cuando hacen click en el boton Add, crea una nueva tarea y la añade al array de tareitas
+// Cuando hacen click en el boton Add, crea una nueva tarea y la añade al array de arr
 var addtarea = document.getElementById("getfuncion");
 addtarea.onclick = function() {
 	var tarea = document.getElementById("introtarea").value; //input
@@ -84,17 +97,14 @@ addtarea.onclick = function() {
   printHTML(nuevatarea.toHTML());
 };
 
-Tareas.prototype.toHTML = function () {
-  var html = '';
-  html += "<ul><li>" + this.tarea + "<li><ul>";
-  html += "<br>";
-  return html;
-}
+Tareas.prototype.toHTML = function contador() {
+var nuevat = document.getElementById("nombrecito");
+nuevat.innerHTML += "<ul> <li> " + this.tarea;
+};
 
 function printHTML (html){
   records.innerHTML = '';
-  records.innerHTML = html;
-}
+  };
 
 
 
