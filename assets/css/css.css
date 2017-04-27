@@ -1,5 +1,5 @@
 button {
-    background-color: #b50ef0;
+    background-color: #259ecc;
     border: solid;
     color: white;
     padding: 15px 32px;
@@ -13,7 +13,8 @@ button {
 
 body{
     background-color: #9fa8ea;
-    font-style: oblique;
+    font-style: italic;
+    color: #ffffff;
 
 }
 
