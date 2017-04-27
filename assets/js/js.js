@@ -1,6 +1,4 @@
-
-
-var tareas = [
+var tareasJ= [
   {
     "userId": 1,
     "id": 1,
@@ -62,55 +60,41 @@ var tareas = [
     "completed": true
   }];
 
-for (var i = 0; i < 10; i++) {
-document.write('<ul> <li> ' + tareas[i].title + '</li></ul>');
-};
-  
-
-  function obtenerDatos(){
-	var input = document.getElementById("introtarea");
-
-	var continput = document.getElementsByClassName("list");
-
-	continput[0].innerHTML +="<li>" + input.value +"<li>"+ "<br>";
-
-	input.value = "";
-}
+ var tareasjs = tareasJ.forEach(function(valorActual){
+    document.write("<ul> <li> " +valorActual.title+"</li></ul>")});
 
 
 
-
-
-/*var tareass = [];
+var arr = [];
 var records = document.getElementById('records');
 
-// Constructor para generar un nuevo producto
-function Producto(nuevatarea) {
-  this.nuevatarea = nuevatarea.toLowerCase();
-  this.producttID = (productos.length + 1);
- 
+
+// Constructor para generar una nueva tarea
+function Tareas(tarea) {
+  this.tarea = tarea;
+  this.tareaID = (arr.length+ 1);
 };
 
-function mergeHTML (){
+// Cuando hacen click en el boton Add, crea una nueva tarea y la añade al array de tareitas
+var addtarea = document.getElementById("getfuncion");
+addtarea.onclick = function() {
+	var tarea = document.getElementById("introtarea").value; //input
+  var nuevatarea  = new Tareas(tarea);
+  arr.push(nuevatarea);
+  printHTML(nuevatarea.toHTML());
+};
+
+Tareas.prototype.toHTML = function () {
   var html = '';
-  for (var i=0; i<tareass.length; i++){
-    html += tareass[i].toHTML();
-  }
+  html += "<ul><li>" + this.tarea + "<li><ul>";
+  html += "<br>";
   return html;
-};
+}
 
-//función que imprime un producto luego de ingresarlo
 function printHTML (html){
   records.innerHTML = '';
   records.innerHTML = html;
 }
 
-// Cuando hacen click en el boton de nueva compra, crea una nueva compra y la añade al array de productos
-var addTarea = document.getElementById('getfuncion');
-addTarea.onclick = function() {
-  var product  = new Producto (nuevatarea);
-  productos.push(product);
-  printHTML(product.toHTML());
-};*/
 
 
