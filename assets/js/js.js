@@ -72,9 +72,9 @@ function User(userId,id,title,completed){
 };
 
 function insertarJS(introtarea){//el parametro de esto es el title, lo que ingresa el usuario, lo demas lo asignas tú dos lineas más abajo
-	var largo = tareasJ.length - 1; //sacando la ultima posicion que es donde insertaremos
-	var variable = User("id","User",introtarea,true); //vamos a crear una variable con el constructor user, pasale los parametros
-	tareasJ[largo] = TareaJ.push(variable)
+	var largo = tareasJ.length+1; //sacando la ultima posicion que es donde insertaremos
+	var variable = User("id","User",introtarea,false); //vamos a crear una variable con el constructor user, pasale los parametros
+	tareasJ[largo] = TareaJ.push(variable);
 };
 
 
