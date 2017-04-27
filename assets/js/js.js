@@ -60,8 +60,14 @@ var tareas = [
     "completed": true
   }];
 
+for (var i = 0; i < 10; i++) {
+document.write('<ul> <li> ' + tareas[i].title + '</li></ul>');
+};
+  
 
-  function obtenerDatos(){
+
+
+  /*function obtenerDatos(){
 	var input = document.getElementById("introtarea");
 
 	var continput = document.getElementsByClassName("list");
@@ -70,3 +76,30 @@ var tareas = [
 
 	input.value = "";
 }
+
+
+var productos = [];
+var records = document.getElementById('records');
+
+// Constructor para generar un nuevo producto
+function Producto(compra, cantidad) {
+  this.compra = compra.toLowerCase();
+  this.producttID = (productos.length + 1);
+  this.cantidad = cantidad;
+};
+//función que imprime un producto luego de ingresarlo
+function printHTML (html){
+  records.innerHTML = '';
+  records.innerHTML = html;
+}
+
+// Cuando hacen click en el boton de nueva compra, crea una nueva compra y la añade al array de productos
+var addCompra = document.getElementById('nuevacompra');
+addCompra.onclick = function() {
+  var compra = prompt('Ingrese su nueva compra');
+  var cantidad = prompt('Ingrese la cantidad');
+  var product  = new Producto (compra, cantidad);
+  productos.push(product);
+  printHTML(product.toHTML());
+};*/
+
