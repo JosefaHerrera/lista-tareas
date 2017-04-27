@@ -1,3 +1,5 @@
+
+
 var tareas = [
   {
     "userId": 1,
@@ -65,28 +67,38 @@ document.write('<ul> <li> ' + tareas[i].title + '</li></ul>');
 };
   
 
-
-
-  /*function obtenerDatos(){
+  function obtenerDatos(){
 	var input = document.getElementById("introtarea");
 
 	var continput = document.getElementsByClassName("list");
 
-	continput[0].innerHTML += input.value +"<br>";
+	continput[0].innerHTML +="<li>" + input.value +"<li>"+ "<br>";
 
 	input.value = "";
 }
 
 
-var productos = [];
+
+
+
+/*var tareass = [];
 var records = document.getElementById('records');
 
 // Constructor para generar un nuevo producto
-function Producto(compra, cantidad) {
-  this.compra = compra.toLowerCase();
+function Producto(nuevatarea) {
+  this.nuevatarea = nuevatarea.toLowerCase();
   this.producttID = (productos.length + 1);
-  this.cantidad = cantidad;
+ 
 };
+
+function mergeHTML (){
+  var html = '';
+  for (var i=0; i<tareass.length; i++){
+    html += tareass[i].toHTML();
+  }
+  return html;
+};
+
 //función que imprime un producto luego de ingresarlo
 function printHTML (html){
   records.innerHTML = '';
@@ -94,12 +106,11 @@ function printHTML (html){
 }
 
 // Cuando hacen click en el boton de nueva compra, crea una nueva compra y la añade al array de productos
-var addCompra = document.getElementById('nuevacompra');
-addCompra.onclick = function() {
-  var compra = prompt('Ingrese su nueva compra');
-  var cantidad = prompt('Ingrese la cantidad');
-  var product  = new Producto (compra, cantidad);
+var addTarea = document.getElementById('getfuncion');
+addTarea.onclick = function() {
+  var product  = new Producto (nuevatarea);
   productos.push(product);
   printHTML(product.toHTML());
 };*/
+
 
